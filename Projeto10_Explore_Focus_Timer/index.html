@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- colocar o icone do site na aba -->
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg"> 
+
+    <!-- conectar o html ao script -->
+    <script type="module" src="src/main.js" defer></script>
+
+</head>
+<body>
+
+    <div id="app">
+
+        <button id="toggle-mode">
+            <!-- ativando o screen reader only (acessibilidade) -->
+            <span class="sr-only">Ativar Light Mode</span>
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+        </button>
+
+        <section id="timer" class="flex">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+        <section id="controls" class="flex">
+            <button
+                data-action="toggleRunning"
+                class="ph ph-play-circle">
+            </button>
+
+            <button
+                data-action="toggleRunning"
+                class="ph ph-pause-circle">
+            </button>
+
+            <button 
+                data-action="set"
+                class="ph ph-timer secundary">
+            </button>
+
+            <button 
+                data-action="reset"
+                class="ph ph-stop-circle secundary">
+            </button>
+
+            <button 
+                data-action="toggleMusic"
+                class="ph ph-speaker-none secundary">
+            </button>
+
+            <button 
+                data-action="toggleMusic"
+                class="ph ph-speaker-high">
+            </button>
+        </section>
+    </div>
+    
+</body>
+</html>
